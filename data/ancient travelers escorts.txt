@@ -1,0 +1,435 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+mission "Travelers' Assistance (Modified Argosy)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Modified Argosy, the <npc>, to protect you for a month."
+	source
+		attributes "south"
+	to offer
+		"reputation: Ancient Travelers" > 70
+	on accept
+		"reputation: Ancient Travelers" -= 70
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Modified Argosy"
+	to complete
+		never
+
+mission "Travelers' Assistance (Osprey)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Osprey, the <npc>, to protect you for a month."
+	source
+		attributes "south"
+	to offer
+		"reputation: Ancient Travelers" > 200
+	on accept
+		"reputation: Ancient Travelers" -= 200
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Osprey (Particle Anti-Missile)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Falcon)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Falcon, the <npc>, to protect you for a month."
+	source
+		attributes "south"
+	to offer
+		"reputation: Ancient Travelers" > 350
+	on accept
+		"reputation: Ancient Travelers" -= 350
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Falcon (Heavy)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Bastion)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Bastion, the <npc>, to protect you for a month."
+	source
+		attributes "rim"
+	to offer
+		"reputation: Ancient Travelers" > 190
+	on accept
+		"reputation: Ancient Travelers" -= 190
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Bastion (Heavy)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Fury)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Fury, the <npc>, to protect you for a month."
+	source
+		attributes "rim"
+	to offer
+		"reputation: Ancient Travelers" > 15
+	on accept
+		"reputation: Ancient Travelers" -= 15
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Fury (Miner)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Wasp)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Wasp, the <npc>, to protect you for a month."
+	source
+		attributes "core"
+	to offer
+		"reputation: Ancient Travelers" > 12
+	on accept
+		"reputation: Ancient Travelers" -= 12
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Wasp (Proton)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Quicksilver)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Quicksilver, the <npc>, to protect you for a month."
+	source
+		attributes "core"
+	to offer
+		"reputation: Ancient Travelers" > 45
+	on accept
+		"reputation: Ancient Travelers" -= 45
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Quicksilver (Proton)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Splinter)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Splinter, the <npc>, to protect you for a month."
+	source
+		attributes "core"
+	to offer
+		"reputation: Ancient Travelers" > 160
+	on accept
+		"reputation: Ancient Travelers" -= 160
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Splinter (Proton)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Vanguard)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Vanguard, the <npc>, to protect you for a month."
+	source
+		attributes "core"
+	to offer
+		"reputation: Ancient Travelers" > 300
+	on accept
+		"reputation: Ancient Travelers" -= 300
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Vanguard (Particle)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Protector)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Protector, the <npc>, to protect you for a month."
+	source
+		attributes "core"
+	to offer
+		"reputation: Ancient Travelers" > 285
+	on accept
+		"reputation: Ancient Travelers" -= 285
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Protector (Proton)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Berserker)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Berserker, the <npc>, to protect you for a month."
+	source
+		attributes "north" "near earth"
+	to offer
+		"reputation: Ancient Travelers" > 14
+	on accept
+		"reputation: Ancient Travelers" -= 14
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Berserker (Afterburner)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Firebird)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Firebird, the <npc>, to protect you for a month."
+	source
+		attributes "north" "near earth"
+	to offer
+		"reputation: Ancient Travelers" > 175
+	on accept
+		"reputation: Ancient Travelers" -= 175
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Firebird"
+	to complete
+		never
+
+mission "Travelers' Assistance (Leviathan)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Leviathan, the <npc>, to protect you for a month."
+	source
+		attributes "north" "near earth"
+	to offer
+		"reputation: Ancient Travelers" > 375
+	on accept
+		"reputation: Ancient Travelers" -= 375
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Leviathan (Particle Chaser)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Headhunter)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Headhunter, the <npc>, to protect you for a month."
+	source
+		attributes "deep"
+	to offer
+		"reputation: Ancient Travelers" > 60
+	on accept
+		"reputation: Ancient Travelers" -= 60
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Headhunter (Particle)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Corvette)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Corvette, the <npc>, to protect you for a month."
+	source
+		attributes "deep"
+	to offer
+		"reputation: Ancient Travelers" > 165
+	on accept
+		"reputation: Ancient Travelers" -= 165
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Corvette (Particle Chaser)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Mule)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Mule, the <npc>, to protect you for a month."
+	source
+		attributes "deep"
+	to offer
+		"reputation: Ancient Travelers" > 180
+	on accept
+		"reputation: Ancient Travelers" -= 180
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Mule (Heavy)"
+	to complete
+		never
+
+mission "Travelers' Assistance (Bactrian)"
+	job
+	repeat
+	deadline 30
+	description "The Ancient Travelers like you enough to offer you protection. If you want, they can ask one of their Bactrian, the <npc>, to protect you for a month."
+	source
+		attributes "deep"
+	to offer
+		"reputation: Ancient Travelers" > 330
+	on accept
+		"reputation: Ancient Travelers" -= 330
+		dialog `The <npc> will escort your fleet until <date>.`
+	on fail
+		dialog `The <npc> stopped protecting you.`
+	npc kill
+		government "Ancient Travelers"
+		personality heroic escort
+		fleet
+			cargo 0
+			names "civilian"
+			variant
+				"Bactrian (Hired Gun)"
+	to complete
+		never

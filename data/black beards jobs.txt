@@ -1,0 +1,156 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+mission "Bounty Black Beards (Small)"
+	name "Wanted Black Beards' small ship near <system>"
+	description "A small pirate ship part of the Black Beards gang named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	to offer
+		"combat rating" > 150
+		random < 10
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
+	npc kill
+		government "Black Beards"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant
+				"Cutthroat"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 100000
+		dialog phrase "generic bounty hunting payment dialog"
+		"Hunted Black Beards" ++
+
+mission "Bounty Black Beards (Transport)"
+	name "Wanted Black Beards' transport near <system>"
+	description "A pirate transport part of the Black Beards gang named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	to offer
+		"combat rating" > 200
+		random < 3
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
+	npc kill
+		government "Black Beards"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant
+				"Nighthawk"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 200000
+		dialog phrase "generic bounty hunting payment dialog"
+		"Hunted Black Beards" ++
+
+mission "Bounty Black Beards (Big)"
+	name "Wanted Black Beards' warship near <system>"
+	description "A pirate warship part of the Black Beards gang named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	to offer
+		"combat rating" > 300
+		random < 5
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
+	npc kill
+		government "Black Beards"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant
+				"Bulkwark"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 320000
+		dialog phrase "generic bounty hunting payment dialog"
+		"Hunted Black Beards" ++
+
+mission "Bounty Black Beards (Carrier)"
+	name "Wanted Black Beards' war-carrier near <system>"
+	description "A pirate war-carrier part of the Black Beards gang named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	to offer
+		"combat rating" > 320
+		random < 5
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
+	npc kill
+		government "Black Beards"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant
+				"Valkyrie"
+				"Dagger" 2
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 340000
+		dialog phrase "generic bounty hunting payment dialog"
+		"Hunted Black Beards" ++
+
+mission "Bounty Black Beards (Capital)"
+	name "Wanted Black Beards' capital ship near <system>"
+	description "A Black Beards capital ship named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	to offer
+		"Hunted Black Beards" > 14
+		"combat rating" > 500
+		random < 1
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
+	npc kill
+		government "Black Beards"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant
+				"Mammoth"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 450000
+		dialog phrase "generic bounty hunting payment dialog"

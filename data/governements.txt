@@ -1,0 +1,51 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+government "Black Beards"
+	swizzle 9
+	color "governments: Pirate"
+	
+	"player reputation" -10
+	"attitude toward"
+		"Wormhole Alpha" -.01
+		"Korath" -.01
+		"Merchant" -.1
+		"Syndicate" -.01
+		"Free Worlds" -.01
+		"Pirate" .4
+		"Militia" -.01
+		"Republic" -.01
+		"Navy Intelligence" -.3
+	"bribe" 20
+	"fine" 0
+	"friendly hail" "friendly pirate"
+	"hostile hail" "hostile pirate"
+	raid "pirate raid"
+
+government "Ancient Travelers"
+	swizzle 14
+	"player reputation" 10
+	"attitude toward"
+		"Wormhole Alpha" -.01
+		"Pirate" -.02
+		"Black Beards" -.2
+		"Pirate (Devil-Run Gang)" -.2
+		"Korath" -.2
+		"Merchant" .1
+	"penalty for"
+		assist -10
+		disable 1
+		board 1
+		capture 3
+		destroy 6
+	"bribe" .05
+	"fine" 0
+	"friendly hail" "friendly civilian"
+	"hostile hail" "hostile civilian"

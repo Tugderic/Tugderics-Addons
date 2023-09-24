@@ -1,0 +1,37 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ship "Osprey" "Osprey (Overheated Plasma)"
+	outfits
+		"Overheated Plasma Cannon" 4
+		"Quad Blaster Turret"
+		"Heavy Anti-Missile Turret"
+		"Breeder Reactor"
+		"LP036a Battery Pack"
+		"D41-HY Shield Generator"
+		"Outfits Expansion" 2
+		"Liquid Helium Cooler"
+		"Laser Rifle" 6
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+
+ship "Hawk" "Hawk (Overheated Plasma)"
+	outfits
+		"Overheated Plasma Cannon" 2
+		"Dwarf Core"
+		"Cooling Ducts"
+		"D14-RN Shield Generator"
+		"Outfits Expansion"
+		"Water Coolant System"
+		"Supercapacitor" 3
+		"X2700 Ion Thruster"
+		"Greyhound Plasma Steering"
+		"Hyperdrive"

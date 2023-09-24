@@ -1,0 +1,150 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+outfitter "Overheated Plasma Cannon Outfitter"
+	"Overheated Plasma Cannon"
+
+event "Overheated Plasma Cannon On Sale"
+	planet "Rust"
+		add outfitter "Overheated Plasma Cannon Outfitter"
+	planet "Trinket"
+		add outfitter "Overheated Plasma Cannon Outfitter"
+	planet "Bourne"
+		add outfitter "Overheated Plasma Cannon Outfitter"
+	planet "Bloodsea"
+		add outfitter "Overheated Plasma Cannon Outfitter"
+	planet "Greenrock"
+		add outfitter "Overheated Plasma Cannon Outfitter"
+	fleet "Large Southern Pirates"
+		add variant 1
+			"Osprey (Overheated Plasma)"
+	fleet "Large Free Worlds"
+		add variant 2
+			"Osprey (Overheated Plasma)"
+			"Hawk (Bomber)"
+		add variant 2
+			"Hawk (Overheated Plasma)" 3
+			"Sparrow" 2
+	fleet "Large Southern Merchants"
+		add variant 1
+			"Freighter"
+			"Hawk (Overheated Plasma)"
+	fleet "Small Free Worlds"
+		add variant 1
+			"Hawk (Overheated Plasma)"
+	fleet "Small Southern Pirates"
+		add variant 1
+			"Hawk (Overheated Plasma)"
+			"Sparrow"
+	fleet "Small Independent"
+		add variant 3
+			"Hawk (Overheated Plasma)"
+		add variant 2
+			"Hawk (Overheated Plasma)" 2
+			"Fury"
+	fleet "Large Independent"
+		add variant 2
+			"Osprey (Overheated Plasma)"
+
+mission "Bounty Troubling Hawks"
+	name "Troubling hawks near <system>"
+	description "A small gang of hawks have been attacking merchants near the <system> system. Destroy them and return to <planet> for payment (<payment>)."
+	to offer
+		"combat rating" > 150
+		random < 10
+	on offer
+		conversation
+			`As you are walking through the spaceport, someone calls out, "Captain ?" it's a Free Worlds officer "you seem experimented, can you help us with some pirate hawks ? we'll pay you <payment>."`
+			choice
+				`	"Okay."`
+					accept
+				`	"Sorry, I'm busy right now."`
+					defer
+	source
+		government "Free Worlds"
+		attributes "rim"
+	npc kill
+		government "Bounty"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant
+				"Hawk (Overheated Plasma)" 3
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 95000
+		dialog "you make it back to the officer and they pays you 95,000 credits"
+
+mission "Strange Outfits Freighter Escort"
+	autosave
+	name "Strange outfits freighter escort"
+	description "Escort a freighter who is carrying experimental outfits safely to Trinket."
+	source
+		government "Free Worlds"
+		attributes "rim"
+	destination "Trinket"
+	to offer
+		has "Bounty Troubling Hawks: done"
+	on offer
+		conversation
+			`a merchant captain is searching for escort to Trinket, in the Sargas system, from what you understand, they are transporting experimental outfits to study them and mass produce them, they'll pay 100,000 credits`
+			choice
+				`	(Volunteer.)`
+				`	(Go find some other work to do.)`
+					defer
+			
+			`	"thank you" says the captain.`
+				accept
+	npc accompany save
+		government "Merchant"
+		personality escort timid
+		ship Freighter "F.S. Raleigh"
+	on visit
+		dialog `You have reached <planet>, but you left the F.S. Raleigh behind ! Better depart and wait for them to arrive in this star system.`
+	on complete
+		payment 100000
+		dialog "you land on Trinket and the merchant captain pays you 100,000 credits"
+
+
+mission "Bounty Troubling Experimental Osprey"
+	name "Troubling experimental osprey near <system>"
+	description "A pirate osprey have stolen experimental weapon and have been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
+	to offer
+		"combat rating" > 250
+		random < 70
+	on offer
+		conversation
+			`an engineer aproach you: "can you help us please ? a Pirate osprey stole some of our experimental outfits and is now attacking local merchants, can you destroy it for us ? we will watch the fight to see what weakness our weapon may have.","we'll also pay you 300,000 credits, if contributing to science isn't enough"`
+			choice
+				`	"Okay."`
+					accept
+				`	"Sorry, I'm busy right now."`
+					defer
+	source "Trinket"
+	npc kill
+		government "Bounty"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant
+				"Osprey (Overheated Plasma)"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 300000
+		dialog "you land back on Trinket and the engineer thanks you then pays you 300,000 credits, telling you to come back in a 3 or 4 weeks if you want some of this osprey's weapons"
+		event "Overheated Plasma Cannon On Sale" 25

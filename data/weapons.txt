@@ -1,0 +1,82 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+outfit "Overheated Plasma Cannon"
+	category "Guns"
+	cost 350000
+	thumbnail "outfit/overheated plasma cannon"
+	"mass" 35
+	"outfit space" -35
+	"weapon capacity" -25
+	"gun ports" -1
+	weapon
+		sprite "projectile/overheated plasma"
+			"frame rate" 3
+		sound "plasma"
+		"hit effect" "plasma explosion"
+		"inaccuracy" 2
+		"velocity" 25
+		"lifetime" 20
+		"reload" 18
+		"firing energy" 35
+		"firing heat" 250
+		"hit force" 50
+		"shield damage" 72
+		"hull damage" 30
+		"heat damage" 750
+	description "This version of the Plasma Cannon takes more space but shoots way hotter projectiles."
+
+outfit "Energy Cannon"
+	category "Guns"
+	cost 60000
+	thumbnail "outfit/energy cannon"
+	"mass" 18
+	"outfit space" -18
+	"weapon capacity" -18
+	"gun ports" -1
+	weapon
+		sprite "projectile/energy cannon shot"
+			"frame rate" 5
+		sound "blaster"
+		"hit effect" "blaster impact" 5
+		"inaccuracy" 2
+		"velocity" 8.5
+		"lifetime" 70
+		"reload" 60
+		"firing energy" 100
+		"firing heat" 300
+		"shield damage" 185
+		"hull damage" 112
+	description "This Cannon, based on the small energy blaster, is way stronger and have a longer range."
+
+outfit "Energy Cannon Turret"
+	category "Turrets"
+	cost 180000
+	thumbnail "outfit/energy cannon turret"
+	"mass" 30
+	"outfit space" -30
+	"weapon capacity" -30
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/energy cannon shot"
+			"frame rate" 5
+		"hardpoint sprite" "hardpoint/energy cannon turret"
+		sound "blaster"
+		"hit effect" "blaster impact" 5
+		"inaccuracy" 2
+		"velocity" 8.5
+		"lifetime" 70
+		"reload" 60
+		"firing energy" 100
+		"firing heat" 300
+		"shield damage" 185
+		"hull damage" 112
+	description "This is a turret version of the energy cannon."

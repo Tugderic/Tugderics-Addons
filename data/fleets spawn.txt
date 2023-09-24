@@ -1,0 +1,709 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+mission "Black Beards Valkyries Cohort"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Black Beards Valkyries Cohort: active"
+	to complete
+		never
+	npc save
+		government "Black Beards" 
+		personality heroic disables plunders harvests uninterested
+		system Alcyone
+		fleet
+			cargo 1
+			names "pirate"
+			variant
+				"Valkyrie" 6
+				"Dagger" 12
+				"Nighthawk" 2
+				"Cutthroat" 5
+
+mission "Black Beards Backline"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Black Beards Backline: active"
+	to complete
+		never
+	npc save
+		government "Black Beards" 
+		personality disables plunders harvests timid uninterested
+		system Alcyone
+		fleet
+			cargo 10
+			names "pirate"
+			variant
+				"Bulkwark" 3
+				"Scrapper" 11
+				"Nighthawk" 3
+				"Cutthroat" 3
+
+mission "Black Beards Main Fleet"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Black Beards Main Fleet: active"
+	to complete
+		never
+	npc save
+		government "Black Beards" 
+		personality disables plunders harvests uninterested
+		system Alcyone
+		fleet
+			cargo 10
+			names "pirate"
+			variant
+				"Bulkwark" 4
+				"Valkyrie" 4
+				"Dagger" 8
+				"Mammoth" 2
+				"Cutthroat" 7
+
+mission "Black Beards Scouts 1"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Black Beards Scouts 1: active"
+	to complete
+		never
+	npc save
+		government "Black Beards" 
+		personality disables plunders harvests uninterested
+		system Alcyone
+		fleet
+			cargo 1
+			names "pirate"
+			variant
+				"Cutthroat" 2
+				"Scrapper" 4
+				"Bulkwark"
+
+mission "Black Beards Scouts 2"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Black Beards Scouts 2: active"
+	to complete
+		never
+	npc save
+		government "Black Beards" 
+		personality disables plunders harvests uninterested
+		system Alcyone
+		fleet
+			cargo 1
+			names "pirate"
+			variant
+				"Valkyrie" 2
+				"Dagger" 4
+				"Nighthawk"
+
+mission "Black Beards Scouts 3"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Black Beards Valkyries Cohort: active"
+	to complete
+		never
+	npc save
+		government "Black Beards" 
+		personality disables plunders harvests uninterested
+		system Alcyone
+		fleet
+			cargo 1
+			names "pirate"
+			variant
+				"Valkyrie" 1
+				"Dagger" 2
+				"Cutthroat" 3
+
+mission "Ancient Travelers' Company 1"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 1: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Scheat
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Star Barge (Armed)" 4
+				"Freighter (Proton)" 2
+				"Freighter" 2
+				"Wasp" 3
+				"Splinter (Mark II)" 3
+
+mission "Ancient Travelers' Company 2"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 2: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Kraz
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Fury (Laser)" 4
+				"Modified Argosy (Blaster)" 2
+				"Argosy (Turret)" 2
+				"Hawk (Plasma)"
+				"Bastion (Scanner)" 2
+
+mission "Ancient Travelers' Company 3"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 3: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Pherkad
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Falcon (Plasma)"
+				"Osprey (Laser)"
+				"Osprey"
+
+mission "Ancient Travelers' Company 4"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 4: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Betelgeuse
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Berserker" 2
+				"Berserker (Afterburner)"
+				"Leviathan (Heavy)"
+				"Firebird (Plasma)"
+
+mission "Ancient Travelers' Company 5"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 5: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Avior
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Corvette (Speedy)" 2
+				"Scout (Speedy)" 2
+				"Headhunter (Particle)" 3
+
+mission "Ancient Travelers' Company 6"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 6: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Wezen
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Aerie" 4
+				"Raven (Heavy)"
+				"Raven"
+				"Dagger" 8
+
+mission "Ancient Travelers' Company 7"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 7: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Zosma
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Bactrian (Hired Gun)"
+				"Mule (Heavy)" 3
+				"Dagger" 6
+
+mission "Ancient Travelers' Company 8"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 8: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Markab
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Protector" 2
+				"Vanguard (Particle)" 2
+
+mission "Ancient Travelers' Company 9"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 9: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Polaris
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Bulk Freighter (Proton)"
+				"Bulk Freighter (Blaster)" 2
+				"Bulk Freighter"
+				"Quicksilver (Mark II)" 7
+				"Arrow"
+				"Manta (Mark II)"
+				"Bounder (Luxury)" 2
+
+mission "Ancient Travelers' Company 10"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 10: active"
+		has "event: southern carriers 2"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Tarazed
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Skein (Sidewinder)" 3
+				"Roost" 2
+				"Nest"
+				"Finch" 28
+
+mission "Ancient Travelers' Company 11"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 11: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Sarin
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Marauder Falcon (Weapons)"
+				"Marauder Raven (Weapons)" 2
+				"Marauder Splinter (Engines)"
+
+mission "Ancient Travelers' Company 12"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 12: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Tarazed
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Hauler III" 3
+				"Hauler II" 2
+				"Hauler"
+				"Blackbird" 2
+
+mission "Ancient Travelers' Company 13"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 13: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Castor
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Rainmaker" 2
+				"Gunboat" 3
+				"Star Queen"
+				"Frigate"
+				"Firebird"
+
+mission "Ancient Travelers' Company 14"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 14: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality timid frugal uninterested
+		system Sargas
+		fleet
+			cargo 4
+			names "civilian"
+			variant
+				"Behemoth (Heavy)" 2
+				"Hawk (Speedy)" 3
+				"Clipper (Speedy)" 2
+
+mission "Nuke Manta Guy"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Nuke Manta Guy: active"
+	to complete
+		never
+	npc save
+		government "Pirate"
+		personality heroic uninterested
+		system Tejat
+		fleet
+			cargo 0
+			names "pirate"
+			variant
+				"Manta (Nuclear)"
+
+mission "Intelligence Small Fleet 1"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Intelligence Small Fleet 1: active"
+	to complete
+		never
+	npc save
+		government "Navy Intelligence"
+		personality heroic uninterested
+		system Castor
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Frigate (Republic Intelligence)"
+				"Gunboat (Mark II)" 2
+
+mission "Intelligence Small Fleet 2"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Intelligence Small Fleet 2: active"
+	to complete
+		never
+	npc save
+		government "Navy Intelligence"
+		personality heroic uninterested
+		system Wazn
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Frigate (Republic Intelligence)"
+				"Frigate (Mark II)"
+
+mission "Intelligence Small Fleet 3"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Intelligence Small Fleet 3: active"
+	to complete
+		never
+	npc save
+		government "Navy Intelligence"
+		personality heroic uninterested
+		system Alnair
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Frigate (Republic Intelligence)"
+				"Frigate (Mark II)"
+				"Gunboat (Mark II)" 2
+
+mission "Intelligence Small Fleet 4"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Intelligence Small Fleet 4: active"
+	to complete
+		never
+	npc save
+		government "Navy Intelligence"
+		personality heroic uninterested
+		system Fala
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Frigate (Republic Intelligence)"
+				"Gunboat (Mark II)" 3
+
+mission "Intelligence Small Fleet 5"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Intelligence Small Fleet 5: active"
+	to complete
+		never
+	npc save
+		government "Navy Intelligence"
+		personality heroic uninterested
+		system Graffias
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Frigate (Republic Intelligence)"
+				"Frigate (Mark II)"
+				"Gunboat (Mark II)"
+
+mission "Intelligence Big Fleet 1"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Intelligence Big Fleet 1: active"
+	to complete
+		never
+	npc save
+		government "Navy Intelligence"
+		personality heroic uninterested
+		system Sol
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Cruiser (Republic Intelligence)"
+				"Frigate (Mark II)" 2
+
+mission "Intelligence Big Fleet 1"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Intelligence Big Fleet 1: active"
+	to complete
+		never
+	npc save
+		government "Navy Intelligence"
+		personality heroic uninterested
+		system Saiph
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Cruiser (Republic Intelligence)"
+				"Gunboat (Mark II)" 4
+
+mission "Pugs Puggin'"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Pugs Puggin': active"
+		has "main plot completed"
+		random < 50
+	to complete
+		never
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Maboro"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Maboro"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Enfolta"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Enfolta"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Enfolta"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Enfolta"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Enfolta"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Zibruka"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Zibruka"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Zibruka"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Zibruka"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Zibruka"
+	npc save
+		government "Pug"
+		personality heroic uninterested
+		system Deneb
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Pug Zibruka"
