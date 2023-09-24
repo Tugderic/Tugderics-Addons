@@ -1,2 +1,2 @@
 # Tugderic's Addons
-it's lust a lil plugin i made for fun, it hads some fleets to human space, a Governement of Friendly Merchant who can Escort you if they like you enough, A Strong pirate gang wandering through the galaxy, unlockable outfits, and some missions
+it's just a lil plugin i made for fun, it hads some fleets to human space, a Governement of Friendly Merchant who can Escort you if they like you enough, A Strong pirate gang wandering through the galaxy, unlockable outfits, and some missions
