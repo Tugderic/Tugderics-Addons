@@ -32,10 +32,10 @@ event "Energy Cannon On Sale"
 			"Firebird (Energy Cannon)"
 			"Leviathan (Energy Cannon)"
 
-mission "Strange Outfits Freighter Escort"
+mission "Pirate Freighter Escort"
 	autosave
-	name "Strange outfits freighter escort"
-	description "Escort a freighter who is carrying experimental outfits safely to Trinket."
+	name "Pirate freighter escort"
+	description "Escort a freighter who is carrying modified blasters safely to Prime."
 	source
 		government "Pirate"
 	destination "Prime"
