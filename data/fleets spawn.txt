@@ -596,7 +596,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Maboro"
 	npc save
@@ -605,7 +605,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Maboro"
 	npc save
@@ -614,7 +614,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Enfolta"
 	npc save
@@ -623,7 +623,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Enfolta"
 	npc save
@@ -632,7 +632,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Enfolta"
 	npc save
@@ -641,7 +641,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Enfolta"
 	npc save
@@ -650,7 +650,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Enfolta"
 	npc save
@@ -659,7 +659,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Zibruka"
 	npc save
@@ -668,7 +668,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Zibruka"
 	npc save
@@ -677,7 +677,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Zibruka"
 	npc save
@@ -686,7 +686,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Zibruka"
 	npc save
@@ -695,7 +695,7 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Zibruka"
 	npc save
@@ -704,6 +704,80 @@ mission "Pugs Puggin'"
 		system Deneb
 		fleet
 			cargo 0
-			names "republic capital"
+			names "pug"
 			variant
 				"Pug Zibruka"
+
+mission "Truthseekers In Orbona"
+	invisible
+	landing
+	to offer
+		or
+			has "FW Pug 1: done"
+			has "FWC Pug 1: done"
+
+	on offer
+		conversation
+			`You hear that some Navy captains have gone nuts and are saying that something important is hidden in the Orbona system, they call themselves the Truthseekers, and they attack anyone who enters Orbona.`
+				accept
+	to complete
+		never
+	npc save
+		government "Truthseekers"
+		personality heroic uninterested staying
+		system Orbona
+		fleet
+			cargo 0
+			names "republic capital"
+			variant
+				"Carrier (Truthseekers)"
+				"Lance (Truthseekers)" 4
+				"Combat Drone (Truthseekers)" 4
+				"Surveillance Drone" 2
+				"Frigate (Truthseekers)"
+				"Gunboat (Truthseekers)" 3
+				"Rainmaker (Truthseekers)"
+
+mission "Pugs In Orbona"
+	invisible
+	landing
+	to offer
+		has "Truthseekers In Orbona: done"
+	to complete
+		never
+	npc save
+		government "Pug"
+		personality heroic uninterested staying
+		system Orbona
+		fleet
+			cargo 0
+			names "pug"
+			variant
+				"Pug Zibruka" 3
+				"Pug Enfolta" 3
+				"Pug Maboro" 2
+
+outfitter "Syscore (Overheated)"
+	"Systems Core (Overheated)"
+
+mission "Overheated Tubaflet"
+	invisible
+	landing
+	repeat
+	to offer
+		has "Remnant: Scent of Rain 1: done"
+		not "Overheated Tubaflet: active"
+	to complete
+		never
+	npc save
+		government "Korath"
+		personality heroic uninterested
+		system Nenia
+		fleet
+			cargo 5
+			outfitters "Korath Basics" "Syscore (Overheated)"
+			names "korath"
+			fighters
+				names "korath"
+			variant
+				"Tubfalet (Overheated Syscore)"

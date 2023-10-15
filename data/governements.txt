@@ -49,3 +49,20 @@ government "Ancient Travelers"
 	"fine" 0
 	"friendly hail" "friendly civilian"
 	"hostile hail" "hostile civilian"
+
+government "Truthseekers"
+	swizzle 20
+	color "governments: Navy Intelligence"
+	"player reputation" -10
+	"attitude toward"
+		"Wormhole Alpha" -.01
+		"Korath" -.01
+		"Merchant" -.1
+		"Syndicate" -.01
+		"Free Worlds" -.01
+		"Pug" -.01
+		"Pirate" -.01
+		"Militia" -.01
+		"Republic" -.01
+		"Black Beards" -.02
+		"Navy Intelligence" -0.1

@@ -1,2 +1,1 @@
-Enter some text that describes your plugin in this file.
-Endless Sky will then display it when the user has your plugin installed and selected.
+it's just a lil plugin i made for fun, it adds some fleets to human space, a Governement of Friendly Merchant who can Escort you if they like you enough, A strong pirate gang wandering through the galaxy, unlockable outfits, and some missions, also things out of hooman space

@@ -1,0 +1,61 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+event "Energy Cannon On Sale"
+	outfitter "Lovelace Advanced"
+		"Energy Cannon"
+	outfitter "Lovelace Advanced"
+		"Energy Cannon Turret"
+	fleet "Large Northern Merchants"
+		add variant 5
+			"Freighter" 2
+			"Firebird (Energy Cannon)"
+		add variant 1
+			"Bulk Freighter"
+			"Firebird (Energy Cannon)"
+		add variant 1
+			"Star Queen"
+			"Leviathan (Energy Cannon)"
+	fleet "Large Northern Pirates"
+		add variant 3
+			"Firebird (Energy Cannon)"
+		add variant 2
+			"Leviathan (Energy Cannon)"
+		add variant 1
+			"Firebird (Energy Cannon)"
+			"Leviathan (Energy Cannon)"
+
+mission "Strange Outfits Freighter Escort"
+	autosave
+	name "Strange outfits freighter escort"
+	description "Escort a freighter who is carrying experimental outfits safely to Trinket."
+	source
+		government "Pirate"
+	destination "Prime"
+	on offer
+		conversation
+			`a merchant captain is searching for escort to Prime, in the Betelgeuse system, you have no idea what they are doing on a pirate world. From what you understand, they are transporting Modified blasters, they'll pay 100,000 credits`
+			choice
+				`	(Volunteer.)`
+				`	(Go find some other work to do.)`
+					defer
+			
+			`	"thank you" says the captain.`
+				accept
+	npc accompany save
+		government "Merchant"
+		personality escort timid
+		ship Freighter "Blonde Mermaid"
+	on visit
+		dialog `You have reached <planet>, but you left the Blonde Mermaid behind ! Better depart and wait for them to arrive in this star system.`
+	on complete
+		payment 100000
+		dialog `you land on Prime and the merchant captain pays you 100,000 credits. "Thank you captain, with these blasters, we will make a new weapon."`
+		event "Energy Cannon On Sale" 60
