@@ -742,7 +742,7 @@ mission "Pugs In Orbona"
 	invisible
 	landing
 	to offer
-		has "Truthseekers In Orbona: done"
+		has "Truthseekers In Orbona: failed"
 	to complete
 		never
 	npc save

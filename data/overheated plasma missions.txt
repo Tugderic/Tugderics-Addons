@@ -84,7 +84,7 @@ mission "Bounty Troubling Hawks"
 		dialog phrase "generic bounty hunting on visit"
 	on complete
 		payment 95000
-		dialog "you make it back to the officer and they pays you 95,000 credits"
+		dialog "you make it back to the officer and they pay you 95,000 credits"
 
 mission "Strange Outfits Freighter Escort"
 	autosave

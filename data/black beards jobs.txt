@@ -16,7 +16,7 @@ mission "Bounty Black Beards (Small)"
 	job
 	deadline 14
 	to offer
-		"combat rating" > 150
+		"combat rating" > 90
 		random < 10
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
@@ -45,8 +45,8 @@ mission "Bounty Black Beards (Transport)"
 	job
 	deadline 14
 	to offer
-		"combat rating" > 200
-		random < 3
+		"combat rating" > 130
+		random < 5
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
@@ -74,7 +74,7 @@ mission "Bounty Black Beards (Big)"
 	job
 	deadline 14
 	to offer
-		"combat rating" > 300
+		"combat rating" > 200
 		random < 5
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
@@ -103,7 +103,7 @@ mission "Bounty Black Beards (Carrier)"
 	job
 	deadline 14
 	to offer
-		"combat rating" > 320
+		"combat rating" > 200
 		random < 5
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
@@ -133,9 +133,9 @@ mission "Bounty Black Beards (Capital)"
 	job
 	deadline 14
 	to offer
-		"Hunted Black Beards" > 14
-		"combat rating" > 500
-		random < 1
+		"Hunted Black Beards" > 9
+		"combat rating" > 350
+		random < 2
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"

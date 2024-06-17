@@ -1,0 +1,347 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+outfitter "Haven Arsenal Basics"
+	"Blaster Gatling"
+	"Gremlin Core"
+
+outfitter "Haven Arsenal Advanced"
+	"Fuel Laser"
+	"Troll Reactor"
+
+event "Haven Arsenal 1"
+	planet "Haven"
+		add outfitter "Haven Arsenal Basics"
+	fleet "Small Northern Pirates"
+		add variant 2
+			"Berserker (Gremlin Core)"
+		add variant 2
+			"Headhunter (Blaster Gatling)"
+	fleet "Large Northern Pirates"
+		add variant 5
+			"Firebird (Blaster Gatling)"
+		add variant 2
+			"Firebird (Blaster Gatling)"
+			"Headhunter (Blaster Gatling)"
+			"Berserker"
+		add variant 2
+			"Headhunter (Blaster Gatling)" 2
+			"Headhunter (Particle)"
+		add variant 1
+			"Firebird"
+			"Firebird (Blaster Gatling)"
+		add variant 2
+			"Leviathan (Laser)"
+			"Firebird (Blaster Gatling))"
+event "Haven Arsenal 2"
+	planet "Haven"
+		add outfitter "Haven Arsenal Advanced"
+	fleet "Small Northern Pirates"
+		add variant 1
+			"Aerie (Fuel Laser)"
+			"Dagger (Fuel Laser)" 2
+		add variant 2
+			"Scout (Fuel Laser)"
+		add variant 2
+			"Raven (Fuel Laser)"
+	fleet "Large Northern Pirates"
+		add variant 3
+			"Aerie (Fuel Laser)"
+			"Dagger (Fuel Laser)" 2
+			"Headhunter (Blaster Gatling)"
+		add variant 2
+			"Aerie" 2
+			"Dagger (Fuel Laser)" 4
+		add variant 2
+			"Aerie"
+			"Dagger" 2
+			"Raven (Fuel Laser)"
+		add variant 4
+			"Raven (Fuel Laser)" 2
+		add variant 2
+			"Mule"
+			"Dagger (Fuel Laser)"
+		add variant 5
+			"Leviathan (Blaster Gatling)"
+		add variant 2
+			"Leviathan (Blaster Gatling)"
+			"Firebird (Blaster Gatling)"
+		add variant 2
+			"Leviathan (Blaster Gatling)"
+			"Firebird (Plasma)"
+	fleet "Large Northern Merchant"
+		add variant 1
+			"Behemoth (Blaster Gatling)"
+			"Firebird (Blaster Gatling)"
+
+mission "Pirate Weapon Testing"
+	name "Haven's Engineers weapon testing"
+	description "Haven's Engineers asked you to protect their freighter and destroy any pirate attacking it."
+	autosave
+	to offer
+		"combat rating" > 80
+		random < 20
+	on offer
+		conversation
+			`As you are walking through the spaceport, someone call you "You're a captain, right ? we're engineers, and we want to test our new equipement. we have a fleet already equipped, and we'll test it by lurring in other pirates with a freighter, and having our fleet destroy them with our weapons. even if we have a strong fleet, we're looking for help, just  in case. we'll pay you <payment>, if you accept, protect the freighter and help the fleet destroy any agressive pirate."`
+			choice
+				`	"Okay."`
+					accept
+				`	"Sorry, I'm busy right now."`
+					defer
+	source Haven
+	npc save
+		government "Pirate (Haven Engineers)"
+		personality timid staying
+		ship "Behemoth (Blaster Gatling)" "Gold Mermaid"
+	npc kill
+		government "Pirate"
+		personality entering staying plunders target
+		fleet
+			names "pirate"
+			variant
+				"Corvette"
+				"Berserker" 3
+				"Headhunter (Particle)" 2
+		dialog phrase "generic hunted bounty eliminated dialog"
+	npc
+		government "Pirate (Haven Engineers)"
+		personality staying daring
+		fleet
+			names "pirate"
+			variant
+				"Firebird (Blaster Gatling)" 3
+				"Headhunter (Blaster Gatling)" 4
+				"Berserker (Gremlin Core)" 5
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 75000
+		dialog "you make it back to the engineers, they pay you <payment>, they tell you they plan to start selling their equipement in a week or two"
+		event "Haven Arsenal 1" 14
+
+mission "Haven Freighter Escort 1A"
+	name "Haven's Freighter Escort"
+	description "Haven's Engineers asked you to escort their Freighter to Prime, in the Betelgeuse system."
+	autosave
+	to offer
+		random < 25
+		has "event: Haven Arsenal 1"
+	on offer
+		conversation
+			`As you are walking through the spaceport, an engineer aproach you : "Captain <last>, we're looking for someone to escort our freighter to Prime and back, payment will be 150,000 credits."`
+			choice
+				`	"Okay."`
+					accept
+				`	"Sorry, I'm busy right now."`
+					defer
+	source Haven
+	destination Prime
+	npc save accompany
+		government "Pirate (Haven Engineers)"
+		personality timid escort
+		ship "Behemoth (Blaster Gatling)" "Gold Mermaid"
+	on visit
+		dialog `You have reached <planet>, but you left the Gold Mermaid behind ! Better depart and wait for them to arrive in this star system.`
+	npc
+		government "Pirate (Haven Engineers)"
+		personality escort daring
+		fleet
+			names "pirate"
+			variant
+				"Headhunter (Blaster Gatling)" 2
+	on complete
+		dialog "you made it to Prime, now escort the freighter back to Haven"
+
+mission "Haven Freighter Escort 1B"
+	name "Haven's Freighter Escort"
+	description "Haven's Engineers asked you to escort their Freighter to Prime, in the Betelgeuse system."
+	autosave
+	landing
+	clearance
+	to offer
+		has "Haven Freighter Escort 1A: done"
+	source Prime
+	destination Haven
+	npc save accompany
+		government "Pirate (Haven Engineers)"
+		personality timid escort
+		ship "Behemoth (Blaster Gatling)" "Gold Mermaid"
+	on visit
+		dialog `You have reached <planet>, but you left the Gold Mermaid behind ! Better depart and wait for them to arrive in this star system.`
+	npc
+		government "Pirate (Haven Engineers)"
+		personality escort daring
+		fleet
+			names "pirate"
+			variant
+				"Headhunter (Blaster Gatling)" 2
+	on complete
+		payment 150000
+		dialog "you made it back to Haven, engineers pay you <payment>"
+
+mission "Haven Freighter Escort 2A"
+	name "Haven's Freighter Escort"
+	description "Haven's Engineers asked you to escort their Freighter to Valhalla, in the Epsilon Leonis system."
+	autosave
+	to offer
+		random < 33
+		has "Haven Freighter Escort 1B: done"
+	on offer
+		conversation
+			`As you are walking through the spaceport, an engineer aproach you : "Captain <last>, we're looking for someone to escort our freighter to Valhalla and back, payment will be 250,000 credits."`
+			choice
+				`	"Okay."`
+					accept
+				`	"Sorry, I'm busy right now."`
+					defer
+	source Haven
+	destination Valhalla
+	npc save accompany
+		government "Pirate (Haven Engineers)"
+		personality timid escort
+		ship "Behemoth (Blaster Gatling)" "Gold Mermaid"
+	on visit
+		dialog `You have reached <planet>, but you left the Gold Mermaid behind ! Better depart and wait for them to arrive in this star system.`
+	npc
+		government "Pirate (Haven Engineers)"
+		personality escort daring
+		fleet
+			names "pirate"
+			variant
+				"Scout (Fuel Laser)" 4
+				"Leviathan (Blaster Gatling)"
+	on complete
+		dialog "you made it to Valhalla, now escort the freighter back to Haven"
+
+mission "Haven Bounty"
+	name "Haven's Renegade Leviathan"
+	description "Haven's Engineers asked you to disable a Leviathan who's captain betrayed them, make sure not to destroy it, as it contains a new prototype."
+	autosave
+	to offer
+		random < 40
+		has "Haven Freighter Escort 2B: done"
+	source Haven
+	on offer
+		conversation
+			`Haven's engineers are lokking for someone to disable a Leviathan, who's captain betrayed them. since there is a new prototype inside the ship, you would have to make sure not to destroy it. payment is <payment>`
+			choice
+				`	(Volunteer)`
+					accept
+				`	(not now)`
+					defer
+	npc disable
+		government "Pirate"
+		personality target staying waiting daring
+		fleet
+			names "pirate"
+			variant
+				"Leviathan (Blaster Gatling)"
+		log phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 300000
+		dialog "you made it back to Haven, engineers pay you <payment>, and tell you to come back soon to buy their new equipement"
+		event "Haven Arsenal 2" 14
+
+outfitter "Northern Warlord Loot"
+	"Blaster Gatling"
+	"Gremlin Core"
+	"Fuel Laser"
+	"Troll Reactor"
+	"Dwarf Core"
+	"S-270 Regenerator"
+	"S-970 Regenerator"
+	"Electron Beam"
+	"Ion Cannon"
+	"Plasma Cannon"
+	"Bullfrog Anti-Missile"
+	"Ogre Reactor"
+	"Ionic Afterburner"
+
+mission "Northern Pirate Warlord Bounty"
+	name "Northern pirate warlord bounty"
+	description "hunt down a pirate warlord in the far north and return to <planet> for payment (<payment>)."
+	autosave
+	job
+	repeat
+	to offer
+		"combat rating" > 520
+		random < 4
+		has "event: Haven Arsenal 2"
+	source
+		not government Pirate
+		near Arneb 0 10
+	npc kill
+		government "Bounty"
+		personality target staying daring
+		system
+			near Gorvi 0 1
+		fleet
+			cargo 5
+			outfitters "Northern Warlord Loot"
+			names "pirate"
+			variant
+				"Leviathan (Blaster Gatling)"
+				"Firebird (Blaster Gatling)" 2
+			variant
+				"Marauder Leviathan (Weapons)"
+				"Marauder Leviathan (Engines)"
+			variant
+				"Behemoth (Blaster Gatling)"
+				"Firebird (Blaster Gatling)"
+				"Aerie (Fuel Laser)"
+				"Mule"
+				"Dagger (Fuel Laser)" 3
+				"Headhunter (Blaster Gatling)" 3
+			variant
+				"Carrier (Pirate Warlord)"
+				"Dagger (Pirate Warlord)" 4
+				"Mining Drone (Pirate Warlord)" 6
+		log phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 600000
+		dialog phrase "generic bounty hunting payment dialog"
+
+mission "Northern Pirate Warlord Bounty (Dreadnought)"
+	name "Northern pirate warlord bounty"
+	description "hunt down a pirate warlord in the far north and return to <planet> for payment (<payment>)."
+	autosave
+	job
+	repeat
+	to offer
+		"combat rating" > 520
+		random < 1
+		has "event: Haven Arsenal 2"
+		has "event: dreadnoughts for sale"
+	source
+		not government Pirate
+		near Arneb 0 10
+	npc kill
+		government "Bounty"
+		personality target staying waiting daring
+		system
+			near Gorvi 0 1
+		fleet
+			cargo 5
+			outfitters "Northern Warlord Loot"
+			names "pirate"
+			variant
+				"Dreadnought (Pirate Warlord)"
+		log phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 600000
+		dialog phrase "generic bounty hunting payment dialog"
+

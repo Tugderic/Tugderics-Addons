@@ -16,6 +16,7 @@ government "Black Beards"
 	"attitude toward"
 		"Wormhole Alpha" -.01
 		"Korath" -.01
+		"Pug" -.01
 		"Merchant" -.1
 		"Syndicate" -.01
 		"Free Worlds" -.01
@@ -35,6 +36,7 @@ government "Ancient Travelers"
 	"attitude toward"
 		"Wormhole Alpha" -.01
 		"Pirate" -.02
+		"Pug" -.01
 		"Black Beards" -.2
 		"Pirate (Devil-Run Gang)" -.2
 		"Korath" -.2
@@ -66,3 +68,24 @@ government "Truthseekers"
 		"Republic" -.01
 		"Black Beards" -.02
 		"Navy Intelligence" -0.1
+		"Ancient Travelers" -0.1
+
+government "Pirate (Haven Engineers)"
+	swizzle 6
+	color "governments: Pirate"
+	
+	"player reputation" 10
+	"attitude toward"
+		"Pirate" -.01
+		"Militia" -.01
+		"Republic" -.01
+		"Black Beards" -.02
+		"Navy Intelligence" -0.1
+		"Ancient Travelers" -0.1
+	"bribe" .05
+	"fine" 0
+	"friendly hail" "friendly pirate"
+	"friendly disabled hail" "friendly disabled pirate"
+	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled pirate"
+	raid "pirate raid"

@@ -23,3 +23,49 @@ outfit "Systems Core (Overheated)"
 	"hull heat" 1.2
 	"heat generation" 12
 	description `This systems core runs way hotter than it should.`
+
+
+outfit "Pulsar Cell"
+	category "Power"
+	licenses
+		Remnant
+	cost 4384000
+	thumbnail "outfit/pulsar cell"
+	"mass" 220
+	"outfit space" -220
+	"energy generation" 33.7
+	"heat generation" 45.2
+	"ion resistance" 0.27
+	"scramble resistance" 0.27
+	description "This enormous cell is capable of providing enough energy for any remnant ship capable of fitting it."
+	description "	The ion resistance on all Remnant generators not only allows them to bounce back from ion storms more quickly, but also gives their ships a window of time when an ion storm starts where they are not affected, giving them a chance to escape before becoming debilitated by the storm."
+
+outfit "Gremlin Core"
+	category "Power"
+	cost 800000
+	thumbnail "outfit/gremlin core"
+	"mass" 28
+	"outfit space" -28
+	"energy generation" 3.7
+	"heat generation" 12.5
+	description "The Gremlin core is a modified version of the dwarf core, modified by pirates, making it way smaller but less heat efficient."
+
+outfit "Troll Reactor"
+	category "Power"
+	cost 7400000
+	thumbnail "outfit/troll reactor"
+	"mass" 110
+	"outfit space" -110
+	"energy generation" 20.8
+	"heat generation" 48
+	description "Pirates created the Troll Reactor as a way to outmatch heavy merchant warship, while a little bigger and less heat efficient, it can be a good alternative to the fusion reactor for power-hungry warships."
+
+outfit "Ogre Reactor"
+	category "Power"
+	cost 15000000
+	thumbnail "outfit/ogre reactor"
+	"mass" 150
+	"outfit space" -150
+	"energy generation" 28.6
+	"heat generation" 68
+	description "a reactor made by pirates warlords for their biggest ships, it produces an absurd amount of energy."

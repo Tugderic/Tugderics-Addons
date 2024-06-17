@@ -10,9 +10,9 @@
 
 event "Energy Cannon On Sale"
 	outfitter "Lovelace Advanced"
-		"Energy Cannon"
+		"(TA) Energy Cannon"
 	outfitter "Lovelace Advanced"
-		"Energy Cannon Turret"
+		"(TA) Energy Cannon Turret"
 	fleet "Large Northern Merchants"
 		add variant 5
 			"Freighter" 2
@@ -39,6 +39,9 @@ mission "Pirate Freighter Escort"
 	source
 		government "Pirate"
 	destination "Prime"
+	to offer
+		"combat rating" > 30
+		random < 20
 	on offer
 		conversation
 			`a merchant captain is searching for escort to Prime, in the Betelgeuse system, you have no idea what they are doing on a pirate world. From what you understand, they are transporting Modified blasters, they'll pay 100,000 credits`
