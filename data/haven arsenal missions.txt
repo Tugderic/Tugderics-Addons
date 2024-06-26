@@ -187,7 +187,7 @@ mission "Haven Freighter Escort 1B"
 		payment 150000
 		dialog "you made it back to Haven, engineers pay you <payment>"
 
-mission "Haven Freighter Escort 2A"
+mission "Haven Freighter Escort 2"
 	name "Haven's Freighter Escort"
 	description "Haven's Engineers asked you to escort their Freighter to Valhalla, in the Epsilon Leonis system."
 	autosave
@@ -196,7 +196,7 @@ mission "Haven Freighter Escort 2A"
 		has "Haven Freighter Escort 1B: done"
 	on offer
 		conversation
-			`As you are walking through the spaceport, an engineer aproach you : "Captain <last>, we're looking for someone to escort our freighter to Valhalla and back, payment will be 250,000 credits."`
+			`As you are walking through the spaceport, an engineer aproach you : "Captain <last>, we're looking for someone to escort our freighter to Valhalla, payment will be 250,000 credits."`
 			choice
 				`	"Okay."`
 					accept
@@ -219,7 +219,8 @@ mission "Haven Freighter Escort 2A"
 				"Scout (Fuel Laser)" 4
 				"Leviathan (Blaster Gatling)"
 	on complete
-		dialog "you made it to Valhalla, now escort the freighter back to Haven"
+		dialog "you made it to Valhalla, the engineers pay you 250,000 credits"
+		payment 250000
 
 mission "Haven Bounty"
 	name "Haven's Renegade Leviathan"
@@ -227,7 +228,7 @@ mission "Haven Bounty"
 	autosave
 	to offer
 		random < 40
-		has "Haven Freighter Escort 2B: done"
+		has "Haven Freighter Escort 2: done"
 	source Haven
 	on offer
 		conversation
@@ -270,12 +271,12 @@ outfitter "Northern Warlord Loot"
 mission "Northern Pirate Warlord Bounty"
 	name "Northern pirate warlord bounty"
 	description "hunt down a pirate warlord in the far north and return to <planet> for payment (<payment>)."
-	autosave
+	deadline 60
 	job
 	repeat
 	to offer
 		"combat rating" > 520
-		random < 4
+		random < 6
 		has "event: Haven Arsenal 2"
 	source
 		not government Pirate
@@ -316,7 +317,7 @@ mission "Northern Pirate Warlord Bounty"
 mission "Northern Pirate Warlord Bounty (Dreadnought)"
 	name "Northern pirate warlord bounty"
 	description "hunt down a pirate warlord in the far north and return to <planet> for payment (<payment>)."
-	autosave
+	deadline 60
 	job
 	repeat
 	to offer

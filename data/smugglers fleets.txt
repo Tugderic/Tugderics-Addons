@@ -1,0 +1,104 @@
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program. If not, see <https://www.gnu.org/licenses/>.
+
+outfitter "Smuggled Stuff"
+	"Nerve Gas"
+	"Fragmentation Grenades"
+	"Electron Beam"
+	"Ionic Afterburner"
+	"Laser Rifle"
+	"S-270 Regenerator"
+
+fleet "Small Smugglers"
+	government "Smuggler"
+	names "pirate"
+	cargo 3
+	commodities "Illegal Substances" "Illegal Cargo"
+	outfitters "Smuggled Stuff"
+	personality
+		confusion 30
+		timid coward secretive
+	variant 12
+		"Clipper"
+	variant 10
+		"Runner"
+		"Sparrow"
+	variant 1
+		"Mule"
+		"Dagger"
+	variant 2
+		"Heavy Shuttle (Armed)"
+	variant 3
+		"Runner III"
+	variant 1
+		"Runner III (Gatling)"
+	variant 1
+		"Runner III (Javelin)"
+	variant 5
+		"Runner II"
+	variant 3
+		"Runner II (Gatling)"
+	variant 2
+		"Runner II (Javelin)"
+	variant 7
+		"Runner"
+		"Berserker"
+	variant 7
+		"Runner"
+	variant 5
+		"Runner (Gatling)"
+	variant 5
+		"Runner (Javelin)"
+	variant 1
+		"Scrapper"
+
+fleet "Large Smugglers"
+	government "Smuggler"
+	names "pirate"
+	cargo 4
+	commidities "Illegal Substances" "Illegal Cargo" "Highly Illegal Substances" "Highly Illegal Cargo"
+	outfitters "Smuggled Stuff"
+	personality
+		confusion 25
+		timid coward secretive
+	variant 10
+		"Runner"
+		"Sparrow" 2
+	variant 30
+		"Modified Argosy (Smuggler)"
+	variant 20
+		"Argosy (Laser)"
+	variant 15
+		"Argosy (Missile)"
+	variant 20
+		"Argosy" 2
+	variant 10
+		"Modified Argosy (Smuggler)" 2
+	variant 12
+		"Runner III (Javelin)"
+		"Runner II (Gatling)"
+		"Runner"
+	variant 10
+		"Runner III" 2
+		"Runner II" 2
+	variant 8
+		"Runner II"
+		"Runner"
+	variant 8
+		"Runner II (Javelin)"
+		"Runner II"
+		"Runner (Javelin)"
+	variant 8
+		"Runner (Gatling)" 3
+	variant 6
+		"Runner III"
+		"Berserker" 2
+	variant 6
+		"Runner III (Gatling)"
+		"Berserker"
+	variant 2
+		"Hogshead"

@@ -1,0 +1,309 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ship "Runner"
+	sprite "ship/runner i"
+	thumbnail "thumbnail/runner i"
+	attributes
+		category "Light Freighter"
+		"cost" 1630000
+		"shields" 2600
+		"hull" 4000
+		"required crew" 4
+		"bunks" 10
+		"mass" 490
+		"drag" 14.7
+		"heat dissipation" .43
+		"fuel capacity" 400
+		"cargo space" 110
+		"outfit space" 380
+		"weapon capacity" 160
+		"engine capacity" 100
+		"scan interference" .5
+		weapon
+			"blast radius" 60
+			"shield damage" 600
+			"hull damage" 300
+			"hit force" 900
+	outfits
+		"Capybara Reverse Thruster"
+		"D23-QP Shield Generator"
+		"Greyhound Plasma Thruster"
+		"Heavy Anti-Missile Turret" 2
+		Hyperdrive
+		"Impala Plasma Steering"
+		"Interference Plating"
+		"LP072a Battery Pack"
+		"Laser Rifle" 2
+		"Meteor Missile" 90
+		"Meteor Missile Box" 2
+		"Meteor Missile Launcher" 2
+		"Quad Blaster Turret" 2
+		"S3 Thermionic"
+		"Small Radar Jammer"
+		"Volcano Afterburner"
+
+	engine -45 122.5
+	engine 45 122.5
+	gun -14.5 -92.5
+	gun 14.5 -92.5
+	turret -21.5 -48 "Quad Blaster Turret"
+	turret 21.5 -48 "Heavy Anti-Missile Turret"
+	turret -18.5 78.5 "Heavy Anti-Missile Turret"
+	turret 18.5 78.5 "Quad Blaster Turret"
+	leak "leak" 60 50
+	leak "flame" 50 80
+	leak "big leak" 90 30
+	explode "tiny explosion" 20
+	explode "small explosion" 35
+	explode "medium explosion" 20
+	explode "large explosion" 5
+	"final explode" "final explosion medium"
+	description "Several centuries ago, in the early days of the Republic, the sudden increase in commerce and space travel led to high demand for cargo ships. Haulers were first created simply by bolting a cockpit and engine block onto a cargo container, and the basic design has not changed much since then."
+
+
+
+ship "Runner II"
+	sprite "ship/runner ii"
+	thumbnail "thumbnail/runner ii"
+	attributes
+		category "Heavy Freighter"
+		"cost" 2740000
+		"shields" 3100
+		"hull" 5700
+		"required crew" 4
+		"bunks" 10
+		"mass" 640
+		"drag" 16.1
+		"heat dissipation" .43
+		"fuel capacity" 400
+		"cargo space" 220
+		"outfit space" 380
+		"weapon capacity" 160
+		"engine capacity" 100
+		"scan interference" .6
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Capybara Reverse Thruster"
+		"D23-QP Shield Generator"
+		"Fragmentation Grenades"
+		"Greyhound Plasma Thruster"
+		"Heavy Anti-Missile Turret" 2
+		Hyperdrive
+		"Impala Plasma Steering"
+		"Interference Plating"
+		"LP072a Battery Pack"
+		"Laser Rifle" 3
+		"Meteor Missile" 90
+		"Meteor Missile Box" 2
+		"Meteor Missile Launcher" 2
+		"Quad Blaster Turret" 2
+		"S3 Thermionic"
+		"Small Radar Jammer"
+		"Volcano Afterburner"
+		
+	engine -45 159.5
+	engine 45 159.5
+	gun -14.5 -129.5
+	gun 14.5 -129.5
+	turret -21.5 -84.5 "Quad Blaster Turret"
+	turret 21.5 -84.5 "Heavy Anti-Missile Turret"
+	turret -18.5 115.5 "Heavy Anti-Missile Turret"
+	turret 18.5 115.5 "Quad Blaster Turret"
+	leak "leak" 60 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 30
+	explode "large explosion" 15
+	"final explode" "final explosion medium"
+	description "This is a mid-sized freighter, designed for a balance between cargo capacity and defensive capability. Centuries ago, various Hauler models made up nearly half of the merchant vessels in service, but today the design is considered somewhat outdated."
+
+
+
+ship "Runner III"
+	sprite "ship/runner iii"
+	thumbnail "thumbnail/runner iii"
+	attributes
+		category "Heavy Freighter"
+		"cost" 3860000
+		"shields" 3600
+		"hull" 7400
+		"required crew" 4
+		"bunks" 10
+		"mass" 790
+		"drag" 17.5
+		"heat dissipation" .43
+		"fuel capacity" 400
+		"cargo space" 330
+		"outfit space" 380
+		"weapon capacity" 160
+		"engine capacity" 100
+		"scan interference" .7
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Capybara Reverse Thruster"
+		"D23-QP Shield Generator"
+		"Greyhound Plasma Thruster"
+		"Heavy Anti-Missile Turret" 2
+		Hyperdrive
+		"Impala Plasma Steering"
+		"Interference Plating"
+		"LP072a Battery Pack"
+		"Laser Rifle" 3
+		"Meteor Missile" 90
+		"Meteor Missile Box" 2
+		"Meteor Missile Launcher" 2
+		"Quad Blaster Turret" 2
+		"S3 Thermionic"
+		"Small Radar Jammer"
+		"Volcano Afterburner"
+
+	engine -45 196.5
+	engine 45 196.5
+	gun -14.5 -166.5
+	gun 14.5 -166.5
+	turret -21.5 -122 "Quad Blaster Turret"
+	turret 21.5 -122 "Heavy Anti-Missile Turret"
+	turret -18.5 152.5 "Heavy Anti-Missile Turret"
+	turret 18.5 152.5 "Quad Blaster Turret"
+	leak "leak" 50 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "small explosion" 15
+	explode "medium explosion" 30
+	explode "large explosion" 20
+	explode "huge explosion" 5
+	"final explode" "final explosion large"
+	description "Considered by many to be outdated, there are nonetheless many Haulers still in service due to their combination of comparatively low price and simple construction. This large version of the Hauler provides the best tradeoff between price and cargo space."
+
+ship "Runner" "Runner (Javelin)"
+	outfits
+		"Anti-Missile Turret"
+		"Capybara Reverse Thruster"
+		"D23-QP Shield Generator"
+		"Greyhound Plasma Thruster"
+		"Heavy Anti-Missile Turret"
+		Hyperdrive
+		"Impala Plasma Steering"
+		"Interference Plating"
+		Javelin 1400
+		"Javelin Pod" 2
+		"Javelin Storage Crate" 2
+		"Javelin Turret" 2
+		"LP072a Battery Pack"
+		"S3 Thermionic"
+		"Small Radar Jammer" 2
+		"Volcano Afterburner"
+
+ship "Runner II" "Runner II (Javelin)"
+	outfits
+		"Anti-Missile Turret"
+		"Capybara Reverse Thruster"
+		"D23-QP Shield Generator"
+		"Greyhound Plasma Thruster"
+		"Heavy Anti-Missile Turret"
+		Hyperdrive
+		"Impala Plasma Steering"
+		"Interference Plating"
+		Javelin 1400
+		"Javelin Pod" 2
+		"Javelin Storage Crate" 2
+		"Javelin Turret" 2
+		"LP072a Battery Pack"
+		"Laser Rifle" 2
+		"S3 Thermionic"
+		"Small Radar Jammer" 2
+		"Volcano Afterburner"
+
+ship "Runner III" "Runner III (Javelin)"
+	outfits
+		"Anti-Missile Turret"
+		"Capybara Reverse Thruster"
+		"D23-QP Shield Generator"
+		"Greyhound Plasma Thruster"
+		"Heavy Anti-Missile Turret"
+		Hyperdrive
+		"Impala Plasma Steering"
+		"Interference Plating"
+		Javelin 1400
+		"Javelin Pod" 2
+		"Javelin Storage Crate" 2
+		"Javelin Turret" 2
+		"LP072a Battery Pack"
+		"Laser Rifle" 4
+		"S3 Thermionic"
+		"Small Radar Jammer" 2
+		"Volcano Afterburner"
+
+ship "Runner" "Runner (Gatling)"
+	outfits
+		"Bullet Boxes" 3
+		"Capybara Reverse Thruster"
+		"D23-QP Shield Generator"
+		"Gatling Gun" 2
+		"Gatling Gun Ammo" 22500
+		"Gatling Turret" 2
+		"Greyhound Plasma Thruster"
+		"Heavy Anti-Missile Turret" 2
+		Hyperdrive
+		"Impala Plasma Steering"
+		"Interference Plating" 3
+		"LP072a Battery Pack"
+		"S3 Thermionic"
+		"Small Radar Jammer"
+		"Volcano Afterburner"
+
+ship "Runner II" "Runner II (Gatling)"
+	outfits
+		"Bullet Boxes" 3
+		"Capybara Reverse Thruster"
+		"D23-QP Shield Generator"
+		"Gatling Gun" 2
+		"Gatling Gun Ammo" 22500
+		"Gatling Turret" 2
+		"Greyhound Plasma Thruster"
+		"Heavy Anti-Missile Turret" 2
+		Hyperdrive
+		"Impala Plasma Steering"
+		"Interference Plating" 3
+		"LP072a Battery Pack"
+		"S3 Thermionic"
+		"Laser Rifle" 3
+		"Small Radar Jammer"
+		"Volcano Afterburner"
+
+ship "Runner III" "Runner III (Gatling)"
+	outfits
+		"Bullet Boxes" 3
+		"Capybara Reverse Thruster"
+		"D23-QP Shield Generator"
+		"Gatling Gun" 2
+		"Gatling Gun Ammo" 22500
+		"Gatling Turret" 2
+		"Greyhound Plasma Thruster"
+		"Heavy Anti-Missile Turret" 2
+		Hyperdrive
+		"Laser Rifle" 3
+		"Impala Plasma Steering"
+		"Interference Plating" 3
+		"LP072a Battery Pack"
+		"S3 Thermionic"
+		"Small Radar Jammer"
+		"Volcano Afterburner"

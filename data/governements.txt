@@ -77,11 +77,33 @@ government "Pirate (Haven Engineers)"
 	"player reputation" 10
 	"attitude toward"
 		"Pirate" -.01
+		"Black Beards" -.02
+	"bribe" .05
+	"fine" 0
+	"friendly hail" "friendly pirate"
+	"friendly disabled hail" "friendly disabled pirate"
+	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled pirate"
+	raid "pirate raid"
+
+government "Smuggler"
+	swizzle 6
+	color "governments: Pirate"
+	
+	"player reputation" -1
+	"attitude toward"
+		"Author" -.01
+		"Hai" -.01
+		"Hai (Wormhole Access)" -.01
+		"Korath" -.01
+		"Syndicate" -.01
+		"Hai (Friendly Unfettered)" -.01
+		"Free Worlds" -.01
+		"Pirate" .6
+		"Merchant" -.1
 		"Militia" -.01
 		"Republic" -.01
-		"Black Beards" -.02
-		"Navy Intelligence" -0.1
-		"Ancient Travelers" -0.1
+		"Navy Intelligence" -.3
 	"bribe" .05
 	"fine" 0
 	"friendly hail" "friendly pirate"

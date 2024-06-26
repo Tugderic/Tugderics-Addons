@@ -1,0 +1,106 @@
+system Acrux
+	add fleet "Small Smugglers" 24
+	add fleet "Large Smugglers" 3600
+system Alkaid
+	add fleet "Small Smugglers" 5000
+	add fleet "Large Smugglers" 7500
+system "Gamma Corvi"
+	add fleet "Small Smugglers" 15000
+system Hadar
+	add fleet "Small Smugglers" 9000
+	add fleet "Large Smugglers" 13500
+system Izar
+	add fleet "Small Smugglers" 20000
+system Kochab
+	add fleet "Small Smugglers" 17500
+system Mimosa
+	add fleet "Small Smugglers" 10000
+	add fleet "Large Smugglers" 13000
+system Minkar
+	add fleet "Small Smugglers" 12000
+	add fleet "Large Smugglers" 16000
+system Spica
+	add fleet "Small Smugglers" 8000
+	add fleet "Large Smugglers" 11000
+system Unukalhai
+	add fleet "Small Smugglers" 9000
+system "Zeta Centauri"
+	add fleet "Small Smugglers" 5000
+	add fleet "Large Smugglers" 7500
+system Zubenelgenubi
+	add fleet "Small Smugglers" 5000
+	add fleet "Large Smugglers" 7500
+system Zubeneschamali
+	add fleet "Small Smugglers" 3000
+	add fleet "Large Smugglers" 4500
+system Albaldah
+	add fleet "Small Smugglers" 1200
+	add fleet "Large Smugglers" 1800
+system Albireo
+	add fleet "Small Smugglers" 1400
+	add fleet "Large Smugglers" 2100
+system Aldhibain
+	add fleet "Small Smugglers" 2000
+	add fleet "Large Smugglers" 3000
+system Alniyat
+	add fleet "Small Smugglers" 4000
+	add fleet "Large Smugglers" 6000
+system Antares
+	add fleet "Small Smugglers" 2000
+	add fleet "Large Smugglers" 3000
+system Atria
+	add fleet "Small Smugglers" 5000
+	add fleet "Large Smugglers" 7500
+system "Beta Lupi"
+	add fleet "Small Smugglers" 2500
+	add fleet "Large Smugglers" 3700
+system Dschubba
+	add fleet "Small Smugglers" 4000
+	add fleet "Large Smugglers" 6000
+system Girtab
+	add fleet "Small Smugglers" 3000
+	add fleet "Large Smugglers" 4500
+system Graffias
+	add fleet "Small Smugglers" 10000
+system Han
+	add fleet "Small Smugglers" 5000
+	add fleet "Large Smugglers" 7500
+system Lesath
+	add fleet "Small Smugglers" 4000
+	add fleet "Large Smugglers" 6000
+system 
+	add fleet "Small Smugglers" 2400
+	add fleet "Large Smugglers" 3600
+system 
+	add fleet "Small Smugglers" 2400
+	add fleet "Large Smugglers" 3600
+system 
+	add fleet "Small Smugglers" 2400
+	add fleet "Large Smugglers" 3600
+system 
+	add fleet "Small Smugglers" 2400
+	add fleet "Large Smugglers" 3600
+system Lurata
+	add fleet "Small Smugglers" 4000
+	add fleet "Large Smugglers" 6000
+system Men
+	add fleet "Small Smugglers" 3500
+	add fleet "Large Smugglers" 5000
+system Nunki
+	add fleet "Small Smugglers" 1700
+	add fleet "Large Smugglers" 2300
+system Pherkad
+	add fleet "Small Smugglers" 4500
+	add fleet "Large Smugglers" 7000
+system Rastaban
+	add fleet "Small Smugglers" 2400
+	add fleet "Large Smugglers" 3600
+system Sargas
+	add fleet "Small Smugglers" 3500
+	add fleet "Large Smugglers" 5000
+system Shaula
+	add fleet "Small Smugglers" 800
+	add fleet "Large Smugglers" 1200
+system "Yed Prior"
+	add fleet "Small Smugglers" 2400
+	add fleet "Large Smugglers" 3600
