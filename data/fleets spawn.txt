@@ -752,7 +752,7 @@ mission "Truthseekers In Orbona"
 			names "republic capital"
 			variant
 				"Carrier (Truthseekers)"
-				"Lance (Truthseekers)" 4
+				"Lance (Truthseekers)" 8
 				"Combat Drone (Truthseekers)" 4
 				"Surveillance Drone" 2
 				"Frigate (Truthseekers)"
