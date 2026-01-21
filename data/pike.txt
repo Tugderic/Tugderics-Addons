@@ -1,0 +1,60 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ship "Pike"
+	sprite "ship/pike"
+	thumbnail "thumbnail/pike"
+	attributes
+		category "Medium Warship"
+		"cost" 4000000
+		"shields" 6000
+		"hull" 3100
+		"required crew" 4
+		"bunks" 9
+		"mass" 650
+		"drag" 5.9
+		"heat dissipation" .52
+		"fuel capacity" 300
+		"cargo space" 15
+		"outfit space" 440
+		"weapon capacity" 160
+		"engine capacity" 120
+		weapon
+			"blast radius" 85
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"D41-HY Shield Generator"
+		Hyperdrive
+		"LP144a Battery Pack"
+		"NT-200 Nucleovoltaic"
+		"Particle Cannon" 4
+		"Small Radar Jammer"
+		"Typhoon Launcher"
+		"Typhoon Torpedo" 30
+		"Water Coolant System"
+		"X3700 Ion Thruster"
+		"X4200 Ion Steering"
+		
+	gun 0 -101 "Typhoon Launcher"
+	gun -47 4.5 "Particle Cannon"
+	gun 47 4.5 "Particle Cannon"
+	gun -46 4.5 "Particle Cannon"
+	gun 46 4.5 "Particle Cannon"
+	engine -46 100
+	engine 46 100
+	leak "leak" 60 10
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+	description "The Pike is basically just a scaled up version of the lance. due to being inspired by a fighter, the pike lacks fuel and cargo, as well as turrets."

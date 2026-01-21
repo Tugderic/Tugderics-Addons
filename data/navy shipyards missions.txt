@@ -1,0 +1,76 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+shipyard "Pike Shipyard"
+	"Blaster Gatling"
+	"Gremlin Core"
+
+
+
+event "Pike Shipyard Geminus"
+	planet "Geminus"
+		add shipyard "Pike Shipyard"
+	fleet "Small Republic"
+		add variant 5
+			"Gunboat"
+			"Pike"
+		add variant 11
+			"Pike"
+	fleet "Large Republic"
+		add variant 8
+			"Pike" 2
+			"Rainmaker (Mark II)"
+			"Gunboat (Mark II)"
+		add variant 4
+			"Cruiser (Mark II)"
+			"Combat Drone" 4
+			"Pike"
+		add variant 2
+			"Carrier (Mark II)"
+			"Lance" 8
+			"Combat Drone" 6
+			"Cruiser (Mark II)"
+			"Combat Drone" 4
+			"Pike" 4
+		add variant 3
+			"Cruiser"
+			"Combat Drone" 4
+			"Pike"
+		add variant 4
+			"Pike" 3
+			"Rainmaker" 3
+
+mission "Navy Ship Testing Pike"
+	name "Navy new ship testing"
+	description "Disable the Navy's new ship, but don't destroy it."
+	autosave
+	to offer
+		"combat rating" > 100
+		random < 20
+		has "event: navy using mark ii ships"
+	on offer
+		conversation
+			`As you are walking through the spaceport, A Navy engineer calls you "You're a captain, right ? we're engineers, and we want to test our new ship, If you could do a test fight against our new ship, we'd be able to know how good it really is, just don't destroy it. we'll pay you <payment>."`
+			choice
+				`	"Okay."`
+					accept
+				`	"Sorry, I'm busy right now."`
+					defer
+	source Geminus	
+	npc disable save
+		personality disables heroic staying
+		government "Test Dummy"
+		ship "Pike" "Test Vessel"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 120000
+		dialog "you make it back to the engineers, they pay you <payment>."
+		event "Pike Shipyard Geminus" 21

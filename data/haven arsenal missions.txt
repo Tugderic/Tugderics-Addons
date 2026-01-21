@@ -39,7 +39,7 @@ event "Haven Arsenal 1"
 			"Firebird (Blaster Gatling)"
 		add variant 2
 			"Leviathan (Laser)"
-			"Firebird (Blaster Gatling))"
+			"Firebird (Blaster Gatling)"
 event "Haven Arsenal 2"
 	planet "Haven"
 		add outfitter "Haven Arsenal Advanced"
