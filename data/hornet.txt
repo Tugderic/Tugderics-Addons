@@ -1,0 +1,59 @@
+# Copyright (c) 2014 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ship "Hornet"
+	sprite "ship/hornet"
+	thumbnail "thumbnail/hornet"
+	attributes
+		category "Light Warship"
+		"cost" 720000
+		"shields" 2800
+		"hull" 900
+		"required crew" 2
+		"bunks" 4
+		"mass" 185
+		"drag" 3.9
+		"heat dissipation" .7
+		"fuel capacity" 500
+		"cargo space" 30
+		"outfit space" 230
+		"weapon capacity" 70
+		"engine capacity" 60
+		weapon
+			"blast radius" 30
+			"shield damage" 400
+			"hull damage" 200
+			"hit force" 300
+	outfits
+		"Cooling Ducts"
+		"D23-QP Shield Generator"
+		"Energy Blaster" 6
+		Hyperdrive
+		"LP072a Battery Pack"
+		"Sidewinder Missile" 45
+		"Sidewinder Missile Launcher"
+		"Small Radar Jammer"
+		"X2200 Ion Steering"
+		"X2700 Ion Thruster"
+		"nGVF-DD Fuel Cell"
+		
+	engine -5.5 45
+	engine 5.5 45
+	gun 0 -41 "Sidewinder Missile Launcher"
+	gun -13.5 -35 "Energy Blaster"
+	gun 13.5 -35 "Energy Blaster"
+	gun -18.5 -27 "Energy Blaster"
+	gun 18.5 -27 "Energy Blaster"
+	gun -27 -20 "Energy Blaster"
+	gun 27 -20 "Energy Blaster"
+	leak "leak" 60 50
+	explode "tiny explosion" 20
+	explode "small explosion" 10
+	description "The Hornet is an heavier version of the wasp, while not necessarily  as strong as other light warships, it's cheap and still quite efficient."

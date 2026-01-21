@@ -1,5 +1,5 @@
 system Acrux
-	add fleet "Small Smugglers" 24
+	add fleet "Small Smugglers" 2400
 	add fleet "Large Smugglers" 3600
 system Alkaid
 	add fleet "Small Smugglers" 5000

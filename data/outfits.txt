@@ -69,3 +69,73 @@ outfit "Ogre Reactor"
 	"energy generation" 28.6
 	"heat generation" 68
 	description "a reactor made by pirates warlords for their biggest ships, it produces an absurd amount of energy."
+
+outfit "P14-RN Shield Generator"
+	category "Systems"
+	series "Shields"
+	index 01010
+	cost 40000
+	thumbnail "outfit/tiny pirate shield"
+	"mass" 15
+	"outfit space" -17
+	"shield delay" 390
+	"delayed shield generation" .6
+	"energy consumption" .2
+	"ion resistance" .05
+	description "These shield generators are much faster than the classic ones, can't generate shield during a fight."
+
+outfit "P23-QP Shield Generator"
+	category "Systems"
+	series "Shields"
+	index 01020
+	cost 70000
+	thumbnail "outfit/small pirate shield"
+	"mass" 22
+	"outfit space" -24
+	"shield delay" 390
+	"delayed shield generation" .96
+	"energy consumption" .32
+	"ion resistance" .08
+	description "These shield generators are much faster than the classic ones, can't generate shield during a fight."
+
+outfit "P41-HY Shield Generator"
+	category "Systems"
+	series "Shields"
+	index 01030
+	cost 130000
+	thumbnail "outfit/medium pirate shield"
+	"mass" 30
+	"outfit space" -33
+	"shield delay" 300
+	"delayed shield generation" 1.53
+	"energy consumption" .51
+	"ion resistance" .14
+	description "These shield generators are much faster than the classic ones, can't generate shield during a fight."
+
+outfit "P67-TM Shield Generator"
+	category "Systems"
+	series "Shields"
+	index 01040
+	cost 240000
+	thumbnail "outfit/large pirate shield"
+	"mass" 45
+	"outfit space" -50
+	"shield delay" 300
+	"delayed shield generation" 2.46
+	"energy consumption" .82
+	"ion resistance" .22
+	description "These shield generators are much faster than the classic ones, can't generate shield during a fight."
+
+outfit "P94-YV Shield Generator"
+	category "Systems"
+	series "Shields"
+	index 01050
+	cost 400000
+	thumbnail "outfit/huge pirate shield"
+	"mass" 60
+	"outfit space" -66
+	"shield delay" 300
+	"delayed shield generation" 3.93
+	"energy consumption" 1.31
+	"ion resistance" .35
+	description "These shield generators are much faster than the classic ones, can't generate shield during a fight."

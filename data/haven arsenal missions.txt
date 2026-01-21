@@ -39,7 +39,7 @@ event "Haven Arsenal 1"
 			"Firebird (Blaster Gatling)"
 		add variant 2
 			"Leviathan (Laser)"
-			"Firebird (Blaster Gatling))"
+			"Firebird (Blaster Gatling)"
 event "Haven Arsenal 2"
 	planet "Haven"
 		add outfitter "Haven Arsenal Advanced"
@@ -305,7 +305,7 @@ mission "Northern Pirate Warlord Bounty"
 				"Headhunter (Blaster Gatling)" 3
 			variant
 				"Carrier (Pirate Warlord)"
-				"Dagger (Pirate Warlord)" 4
+				"Dagger (Pirate Warlord)" 8
 				"Mining Drone (Pirate Warlord)" 6
 		log phrase "generic hunted bounty eliminated dialog"
 	on visit

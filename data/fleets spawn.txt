@@ -427,6 +427,27 @@ mission "Ancient Travelers' Company 14"
 				"Hawk (Speedy)" 3
 				"Clipper (Speedy)" 2
 
+mission "Ancient Travelers' Company 15"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Ancient Travelers' Company 15: active"
+	to complete
+		never
+	npc save
+		government "Ancient Travelers"
+		personality uninterested
+		system Orbona
+		fleet
+			cargo 3
+			names "civilian"
+			variant
+				"Enforcer" 3
+				"Jackal" 3
+				"Saber" 3
+				"Monitor" 3
+
 mission "Nuke Manta Guy"
 	invisible
 	landing
@@ -731,7 +752,7 @@ mission "Truthseekers In Orbona"
 			names "republic capital"
 			variant
 				"Carrier (Truthseekers)"
-				"Lance (Truthseekers)" 4
+				"Lance (Truthseekers)" 8
 				"Combat Drone (Truthseekers)" 4
 				"Surveillance Drone" 2
 				"Frigate (Truthseekers)"
@@ -781,3 +802,363 @@ mission "Overheated Tubaflet"
 				names "korath"
 			variant
 				"Tubfalet (Overheated Syscore)"
+
+mission "Remnant Pulsar Cell Explorer"
+	invisible
+	landing
+	repeat
+	to offer
+		or
+			has "FW Pug 1: done"
+			has "FWC Pug 1: done"
+		not "Remnant Pulsar Cell Explorer: active"
+	to complete
+		never
+	npc save
+		government "Remnant"
+		personality timid uninterested
+		system Cinxia
+		fleet
+			cargo 4
+			names "remnant"
+			variant
+				"Albatross (Pulsar Cell)"
+
+
+mission "Korath Killers"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Korath Killers: active"
+	to complete
+		never
+	npc save
+		government "Pirate" 
+		personality heroic disables plunders harvests uninterested
+		system Atik
+		fleet
+			outfitters "Korath Basics"
+			cargo 5
+			names "pirate"
+			variant
+				"Behemoth (Korath Killer)"
+				"Leviathan (Korath Killer)"
+				"Falcon (Korath Killer)"
+				"Vanguard (Korath Killer)"
+				"Protector (Korath Killer)"
+outfitter "P shields"
+	"P14-RN Shield Generator"
+	"P23-QP Shield Generator"
+	"P41-HY Shield Generator"
+	"P67-TM Shield Generator"
+	"P94-YV Shield Generator"
+
+
+mission "Assembly Fleet 1"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Assembly Fleet 1: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 2
+			names "pirate"
+			variant
+				"Enforcer" 3
+				"Saber" 3
+
+mission "Assembly Fleet 2"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Assembly Fleet 1: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 2
+			names "pirate"
+			variant
+				"Enforcer" 1
+				"Saber" 4
+
+mission "Assembly Fleet 3"
+	invisible
+	landing
+	repeat
+	to offer
+		has "event: Haven Arsenal 2"
+		not "Assembly Fleet 3: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 2
+			names "pirate"
+			variant
+				"Enforcer (assembly)" 6
+				"Saber (assembly)" 5
+
+mission "Assembly Fleet 4"
+	invisible
+	landing
+	repeat
+	to offer
+		has "event: Haven Arsenal 2"
+		not "Assembly Fleet 4: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 2
+			names "pirate"
+			variant
+				"Enforcer (assembly)" 10
+				"Saber (assembly)" 3
+
+
+mission "Assembly Fleet 5"
+	invisible
+	landing
+	repeat
+	to offer
+		has "event: Haven Arsenal 2"
+		not "Assembly Fleet 5: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 2
+			names "pirate"
+			variant
+				"Enforcer (assembly)" 2
+				"Saber (assembly)" 7
+
+mission "Assembly Backlines 1"
+	invisible
+	landing
+	repeat
+	to offer
+		has "event: Haven Arsenal 2"
+		not "Assembly Backlines 1: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 4
+			names "pirate"
+			variant
+				"Hogshead (assembly)" 2
+				"Jackal (assembly)" 6
+
+mission "Assembly Backlines 2"
+	invisible
+	landing
+	repeat
+	to offer
+		has "event: Haven Arsenal 2"
+		not "Assembly Backlines 2: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 4
+			names "pirate"
+			variant
+				"Hogshead (assembly)"
+				"Saber (assembly)" 3
+
+mission "Assembly Backlines 3"
+	invisible
+	landing
+	repeat
+	to offer
+		has "event: Haven Arsenal 2"
+		not "Assembly Backlines 3: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 4
+			names "pirate"
+			variant
+				"Hogshead (assembly)"
+				"Saber (assembly)" 3
+
+mission "Assembly Scouts 1"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Assembly Scouts 1: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 1
+			names "pirate"
+			variant
+				"Saber"
+
+mission "Assembly Scouts 2"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Assembly Scouts 2: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 1
+			names "pirate"
+			variant
+				"Jackal" 5
+
+mission "Assembly Scouts 3"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Assembly Scouts 3: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 1
+			names "pirate"
+			variant
+				"Enforcer" 2
+				"Jackal" 1
+
+mission "Assembly Scouts 4"
+	invisible
+	landing
+	repeat
+	to offer
+		has "event: Haven Arsenal 2"
+		not "Assembly Scouts 4: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 1
+			names "pirate"
+			variant
+				"Enforcer (assembly)"
+				"Jackal (assembly)" 3
+
+mission "Assembly Scouts 5"
+	invisible
+	landing
+	repeat
+	to offer
+		has "event: Haven Arsenal 2"
+		not "Assembly Scouts 5: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 1
+			names "pirate"
+			variant
+				"Jackal (assembly)" 6
+
+mission "Assembly Scouts 6"
+	invisible
+	landing
+	repeat
+	to offer
+		has "event: Haven Arsenal 2"
+		not "Assembly Scouts 6: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 1
+			names "pirate"
+			variant
+				"Saber (assembly)"
+				"Jackal (assembly)"
+
+mission "Assembly Scouts 7"
+	invisible
+	landing
+	repeat
+	to offer
+		has "event: Haven Arsenal 2"
+		not "Assembly Scouts 7: active"
+	to complete
+		never
+	npc save
+		government "The Assembly"
+		personality timid coward secretive disables plunders harvests uninterested
+		system Citadelle
+		fleet
+			outfitters "P shields"
+			cargo 1
+			names "pirate"
+			variant
+				"Enforcer (assembly)" 3
+				"Jackal (assembly)"
